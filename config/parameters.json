@@ -1,0 +1,29 @@
+{
+  "server": {
+    "host": "127.0.0.1",
+    "port": 3000
+  },
+  "database": {
+    "host": "127.0.0.1",
+    "port": 27017,
+    "db": "do",
+    "username": "",
+    "password": ""
+  },
+  "key": {
+    "privateKey": "YourPrivateKey",
+    "tokenExpiration": 3600000,
+    "tokenExpirationDescription": "1 hour"
+  },
+  "mail": {
+    "email": ".qi@yahoo.com",
+    "userName": ".qi",
+    "password": ""
+  },
+  "tests": {
+    "facticeUser": {
+        "email": "senderMail@website.com",
+        "password": "YourPassword"
+    }
+  }
+}
