@@ -172,7 +172,7 @@ exports.resendVerification = {
                 };
                 let token = Jwt.sign(tokenData, _privateKey);
                 try {
-                    let templateFile = MailService.getMailTemplate('../view/resend-verification.mail.ejs');
+                    let templateFile = MailService.getMailTemplate('./api/user/view/resend-verification.mail.ejs');
                     MailService.sendHtmlEmail('Verification link', templateFile, user.email, {token: token});
                     return reply({
                         message: 'Verification link was resent'
