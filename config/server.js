@@ -12,17 +12,19 @@ const server = new Hapi.Server();
 const plugins = [];
 
 server.connection({
-    host: parameters.server.host,
-    port: parameters.server.port
+  host: parameters.server.host,
+  port: parameters.server.port
 });
 
 // Plugins management
-plugins.push({register: auth});
+plugins.push({
+  register: auth
+});
 server.register(plugins, (err) => {
-    if (err) {
-        throw err;
-    }
-    console.log('server plugins was successfull loaded');
+  if (err) {
+    throw err;
+  }
+  console.log('server plugins was successfull loaded');
 });
 
 server.route(routes);

@@ -45,8 +45,8 @@ const manifest = {
         register: 'hapi-swagger',
         options: {
           info: {
-          'title': 'Test API Documentation',
-          'version': "v1.0.0",
+            'title': 'Test API Documentation',
+            'version': "v1.0.0",
           }
         }
       }

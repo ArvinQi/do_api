@@ -10,17 +10,14 @@ exports.register = function (plugin, options, next) {
     // Implement validation function
     validateFunc: (decoded, request, callback) => {
       // NOTE: This is purely for demonstration purposes!
-      var users = [
-        {
-          id: 1,
-          name: 'Jon Snow'
-        }
-      ];
+      var users = [{
+        id: 1,
+        name: 'Jon Snow'
+      }];
 
       if (users.find(u => u.id === decoded.id)) {
         return callback(null, true);
-      }
-      else {
+      } else {
         return callback(null, false);
       }
     }

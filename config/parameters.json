@@ -22,8 +22,8 @@
   },
   "tests": {
     "facticeUser": {
-        "email": "senderMail@website.com",
-        "password": "YourPassword"
+      "email": "senderMail@website.com",
+      "password": "YourPassword"
     }
   }
 }

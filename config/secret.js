@@ -1,1 +1,1 @@
-exports.secret = "Here is my secret."
+exports.secret = "Here is my secret.";

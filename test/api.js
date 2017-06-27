@@ -21,7 +21,9 @@ describe('API', () => {
 
     const plugins = [jwtPlugin, authPlugin, apiPlugin];
     server = new Hapi.Server();
-    server.connection({ port: 8000 });
+    server.connection({
+      port: 8000
+    });
     server.register(plugins, (err) => {
 
       if (err) {
