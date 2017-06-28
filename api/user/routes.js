@@ -11,6 +11,11 @@ module.exports = [{
   config: AuthController.emailConfirmationHandle
 },
 {
+  path: '/auth/{_id}',
+  method: 'GET',
+  config: AuthController.getInfo
+},
+{
   path: '/auth/signin',
   method: 'POST',
   config: AuthController.signin

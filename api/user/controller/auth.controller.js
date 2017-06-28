@@ -206,3 +206,31 @@ exports.resendVerification = {
     });
   }
 };
+
+exports.getInfo = {
+  description: 'Get user info',
+  auth: "jwt",
+  validate: {
+    headers: Joi.object({
+      'authorization': Joi.string().required()
+    }).unknown(),
+    params: {
+      _id: Joi.string().required()
+    }
+  },
+  tags: ['api'],
+  handler: (request, reply) => {
+    let _id = request.params._id;
+    User.findOne({
+      _id: _id
+    }, (err, user) => {
+      if (err) {
+        return reply(Boom.internal());
+      } else if (!user) {
+        return reply(Boom.notFound('No user was found'));
+      } else {
+        return reply(user);
+      }
+    });
+  }
+};

@@ -1,6 +1,6 @@
 const Home = require('./handlers/home');
-
 const UserRoutes = require('./user/routes');
+const TaskRoutes = require('./task/routes');
 exports.register = (plugin, options, next) => {
 
   plugin.route([{
@@ -17,6 +17,7 @@ exports.register = (plugin, options, next) => {
   ]);
 
   plugin.route(UserRoutes);
+  plugin.route(TaskRoutes);
 
   next();
 };

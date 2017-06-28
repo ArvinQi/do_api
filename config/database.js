@@ -8,7 +8,7 @@ Mongoose.Promise = require('bluebird');
 const parameters = require('./parameters.json');
 
 Mongoose.connect('mongodb://' + parameters.database.host + '/' + parameters.database.db, {
-  useMongoClient: true
+  // useMongoClient: true
 });
 
 const db = Mongoose.connection;
