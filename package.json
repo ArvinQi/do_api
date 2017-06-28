@@ -4,7 +4,7 @@
   "license": "MIT",
   "description": "Lean Hapi API Boilerplate",
   "bugs": {
-    "url": "https://github.com/rjmreis/hapi-api/issues"
+    "url": "https://github.com/ArvinQi/do_api/issues"
   },
   "main": "server.js",
   "scripts": {
@@ -13,12 +13,12 @@
     "start:server": "nodemon server.js",
     "lint": "eslint . --ext .js"
   },
-  "author": "Ricardo Reis",
-  "homepage": "https://github.com/rjmreis/hapi-api#readme",
+  "author": "Arvin Qi",
+  "homepage": "https://github.com/ArvinQi/do_api#readme",
   "private": false,
   "repository": {
     "type": "git",
-    "url": "https://github.com/rjmreis/hapi-api.git"
+    "url": "https://github.com/ArvinQi/do_api.git"
   },
   "keywords": [
     "hapi",
