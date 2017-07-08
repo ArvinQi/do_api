@@ -50,7 +50,7 @@ exports.getTask = {
   handler: (request, reply) => {
     let _id = request.params._id;
     let userId = request.params.user_id;
-    Task.find({
+    Task.findOne({
       _id: _id,
       userId: userId
     }, (err, tasks) => {
@@ -116,7 +116,7 @@ exports.updateTask = {
       details: Joi.string(),
       estimate: Joi.number(),
       type: Joi.string(),
-      isFinished: Joi.string(),
+      isFinished: Joi.boolean(),
       // isShared: Joi.string(),
       // finishedByWho: Joi.string(),
       isAssign: Joi.boolean(),

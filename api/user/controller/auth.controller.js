@@ -46,7 +46,7 @@ exports.signup = {
             try {
               let templateFile = MailService.getMailTemplate('./api/user/view/register.mail.ejs');
               MailService
-                .sendHtmlEmail('Welcome on Hapi-Struct', templateFile, user.email, {
+                .sendHtmlEmail('Welcome on DO', templateFile, user.email, {
                   token: token
                 });
               return reply({
@@ -100,6 +100,7 @@ exports.emailConfirmationHandle = {
                 return reply(Boom.internal());
               } else {
                 return reply({
+                  email: user.email,
                   message: 'Your account has been verified'
                 });
               }
@@ -146,7 +147,8 @@ exports.signin = {
             };
             let token = Jwt.sign(tokenData, _privateKey);
             return reply({
-              token: token
+              token: token,
+              user_id: user._id
             });
           } else {
             return reply(Boom.badRequest('Bad credentials'));
@@ -229,7 +231,12 @@ exports.getInfo = {
       } else if (!user) {
         return reply(Boom.notFound('No user was found'));
       } else {
-        return reply(user);
+        return reply({
+          email: user.email,
+          // isVerified: user.isVerified,
+          scope: user.scope,
+          user_id: user._id
+        });
       }
     });
   }

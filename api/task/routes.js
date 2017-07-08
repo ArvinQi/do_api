@@ -14,7 +14,7 @@ module.exports = [{
   config: TaskController.addTask
 },{
   path: '/tasks/{user_id}/task/{_id}',
-  method: 'PATCH',
+  method: 'PUT',
   config: TaskController.updateTask
 },{
   path: '/tasks/{user_id}/task/{_id}',

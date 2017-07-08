@@ -18,7 +18,7 @@ const TaskSchema = new Mongoose.Schema({
   },
   estimate: {
     type: Number,
-    required: true
+    required: false
   },
   type: {
     type: String,
