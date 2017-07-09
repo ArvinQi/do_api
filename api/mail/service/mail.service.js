@@ -7,6 +7,7 @@ const Ejs = require('ejs');
 
 const gmailTransport = NodeMailer.createTransport({
   host: 'arvinqi.com',
+  secureConnection: true,
   port: 25,
   auth: {
     user: Parameters.userName,
