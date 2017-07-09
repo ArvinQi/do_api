@@ -6,7 +6,7 @@ const Parameters = require('../../../config/parameters').mail;
 const Ejs = require('ejs');
 
 const gmailTransport = NodeMailer.createTransport({
-  host: 'smtpcloud.sohu.com',
+  host: 'arvinqi.com',
   port: 25,
   auth: {
     user: Parameters.userName,
