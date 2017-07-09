@@ -6,12 +6,14 @@ const Parameters = require('../../../config/parameters').mail;
 const Ejs = require('ejs');
 
 const gmailTransport = NodeMailer.createTransport({
-  host: 'arvinqi.com',
-  secureConnection: true,
-  port: 25,
+  host: 'smtpdm.aliyun.com',
+  port: 465,
   auth: {
     user: Parameters.userName,
     pass: Parameters.password
+
+    // "userName": "arvinqi_test_73KQnF",
+    // "password": "17QDAuWO6uR3Bn9y"
   }
 });
 
